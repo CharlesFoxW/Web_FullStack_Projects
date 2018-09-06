@@ -1,0 +1,254 @@
+body {
+    font-family: 'Open Sans', sans-serif !important;
+    overflow-x: hidden;
+}
+
+.topBar {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 50px;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+#buttonBlock {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    margin-top: 15px;
+    float: left;
+}
+
+#menu-toggle {
+    color: #222;
+}
+
+#logoBlock {
+    height: 50px;
+    text-decoration: none;
+}
+
+#logoLink {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+.tableArea {
+    width: 96%;
+    background: #e5e5e5;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px #555;
+}
+.tableHead {
+    height: 60px;
+    border-radius: 5px 5px 0 0;
+}
+
+.table-responsive, .text-center {
+    background: #eee;
+}
+
+
+#tableHeadText1, #tableHeadText2, #tableHeadText3,
+#tableBHeadText1, #tableBHeadText2,
+#tableCHeadText1, #tableCHeadText2, #tableCHeadText3,
+#tableHeadFText1, #tableHeadFText2, #tableHeadFText3 {
+    line-height: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+    float: left;
+    color: #3a3a3a;
+    font-weight: bold;
+}
+#selectState, #selectHouse, #selectSenate,
+#selectActiveBills, #selectNewBills,
+#selectHouseComm, #selectSenateComm, #selectJointComm {
+    margin-right: 20px;
+    margin-top: 18px;
+    float: right;
+}
+
+
+#detailsCard, #detailsCardBills, #detailsCardFav {
+    border-radius: 5px;
+    box-shadow: 1px;
+}
+#detailsHeader, #detailsHeaderBill {
+    height: 40px;
+    background: #eee;
+    border-radius: 5px 5px 0 0;
+}
+#backButton, #backButtonBill {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+#detailsHeader span, #detailsHeaderBill span {
+    font-size: 150%;
+    line-height: 40px;
+}
+
+.yellowIconColor {
+    color: #F0B321;
+}
+
+/* Side Bar */
+
+.wrapper, .row {
+    margin-top: 50px;
+    margin-left:0;
+    margin-right:0;
+}
+
+.wrapper:before, .wrapper:after,
+.column:before, .column:after {
+    content: "";
+    display: table;
+}
+
+.wrapper:after,
+.column:after {
+    clear: both;
+}
+
+#sidebar-wrapper {
+    z-index: 9998;
+    position: fixed;
+    height: 100%;
+    background-color: #222;
+    padding-left: 0;
+    padding-top: 20px;
+    float: left;
+}
+
+#sidebar-wrapper .collapse.in {
+    display: inline;
+}
+
+#sidebar-wrapper > .nav>li>a {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar-brand a {
+    font-size: 120%;
+    margin-left: 18px;
+    color: #999;
+    background: #222 !important;
+}
+
+.sidebar-brand a:hover {
+    color: #fff;
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+    text-decoration: none;
+
+}
+
+.sidebar-nav > .active > a {
+    font-weight: bold;
+    color: #fff;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding-left: 16%;
+    left: 0;
+}
+
+.row-offcanvas.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -16%;
+}
+
+.table-responsive {
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*
+ * off canvas sidebar
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+    #sidebar-wrapper {
+        width: 60px;
+    }
+
+    #page-content-wrapper {
+        left: 0;
+        padding-left: 10%;
+        position: relative;
+        background: #f0f0f0;
+    }
+
+    .row-offcanvas.toggled {
+        padding-left: 0;
+    }
+
+    .row-offcanvas.toggled #sidebar-wrapper {
+        width: 0px;
+        z-index: 0;
+    }
+
+    .row-offcanvas.toggled #page-content-wrapper {
+        padding-left: 0;
+    }
+
+    .alt-table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        overflow-x: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #dddddd;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #legisDFirstTable, #legisDImg {
+        padding-left: 0;
+    }
+
+}
+
+
+@media screen and (min-width: 768px) {
+
+    #page-content-wrapper {
+        left: 0;
+        padding-left: 16%;
+        position: relative;
+        background: #f0f0f0;
+    }
+
+    .row-offcanvas.toggled {
+        padding-left: 0;
+    }
+
+
+    .row-offcanvas.toggled #sidebar-wrapper {
+        width: 0;
+        z-index: 0;
+    }
+
+    .row-offcanvas.toggled #page-content-wrapper {
+        padding-left: 0;
+    }
+
+    #legisDFirstTable, #legisDImg {
+        padding-left: 30%;
+    }
+
+}
